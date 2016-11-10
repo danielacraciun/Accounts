@@ -13,9 +13,7 @@ package com.dana;
 //operations records associated to that account, and also that all operations on
 //each account appear also in the logs of the source or destination of the transfer.
 
-import com.dana.models.Account;
 import com.dana.models.AccountManager;
-import com.dana.utils.IO;
 
 import java.util.Random;
 import java.util.stream.IntStream;
@@ -24,7 +22,7 @@ public class Main {
     public static void main(String[] args) {
         AccountManager manager = new AccountManager();
 
-        manager.addAccount("Maria", 900);
+        manager.addAccount("Maria", 9000);
         manager.addAccount("Ana", 3000);
         manager.addAccount("George", 1800);
 
@@ -32,7 +30,7 @@ public class Main {
         Random values = new Random();
 
         // Simulating transfers from 0->1, 1->2, 2->0 and so on...
-        IntStream.range(0, 3000)
+        IntStream.range(0, 9000)
                 .parallel()
                 .forEach(i -> {
                             manager.transferMoney(

@@ -40,13 +40,13 @@ public class AccountManager {
             sender.substractFromBalance(amount);
             // append current operation to the first log (thread safe, using synchronized list)
             sender.addToLog(op);
-            System.out.printf("Sent " + amount + " from " + sender.getOwner() + " to " + recipient.getOwner() + "\n");
+            //System.out.printf("Sent " + amount + " from " + sender.getOwner() + " to " + recipient.getOwner() + "\n");
 
             // ...and add the amount to the receiver
             recipient.addToBalance(amount);
             // append current operation to second log (thread safe, using synchronized list)
             recipient.addToLog(op);
-            System.out.printf("Received " + amount + " to " + recipient.getOwner() + " from " + sender.getOwner() + "\n");
+            //System.out.printf("Received " + amount + " to " + recipient.getOwner() + " from " + sender.getOwner() + "\n");
         } else {
             IO.print("Not enough money!");
         }
