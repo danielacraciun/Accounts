@@ -20,7 +20,7 @@ import java.util.stream.IntStream;
 
 public class Main {
     public static void main(String[] args) {
-        // Testing purposes
+        // Modified this comment
         AccountManager manager = new AccountManager();
 
         manager.addAccount("Maria", 9000);
