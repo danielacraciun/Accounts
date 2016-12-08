@@ -20,8 +20,6 @@ import java.util.stream.IntStream;
 
 public class Main {
     public static void main(String[] args) {
-        // Modified this comment a few hours ago
-        // etc
         AccountManager manager = new AccountManager();
 
         manager.addAccount("Maria", 9000);
